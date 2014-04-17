@@ -1,0 +1,108 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/respond.js"></script>
+</head>        
+   <style>
+            h1 {
+                font-family: arial;
+                font-size: 64px;
+                color: #000088;
+                margin-left: 300px;
+                margin-bottom: 40px;
+                float: center;
+                
+            }
+            #miniinfo {
+                
+                
+                background-color: lightblue;
+            }
+            
+            #seccol {
+                
+                float: center;
+                
+
+            }
+
+            #poliinfo {
+                        float: left;
+
+                        
+            }
+            #photo {
+                float: left;
+                border-spacing: 2px;
+                border: 2px;
+
+            }
+   
+            #thirdcol {
+
+                float: right;
+                background-color: lightblue;
+            }
+
+            #backbutton{
+                margin-top: 400px;
+            }
+   </style>
+
+<body>
+<div class="container">
+        <div class="col-lg-6 col-sm-5">
+           <h1><strong>Politician Information Page</strong></h1>
+        </div>
+    
+    <div class="col-md-4" id="miniinfo">
+        <p><img src="/img/politician.{{official.id}}.jpg" height="200" style="max-width: 200px" id="photo" class="img-responsive img-rounded"></p>
+        <div id="poliinfo">
+        <p style="font-family:arial_bold;color:black;font-size:20px;">{{official.first_name}} {{official.last_name}}</br>
+            {{official.title}}</br>
+            {{official.state}}</br>
+            {{official.party_affiliation}}</br>
+            {{official.chamber}}</br>
+        </p>
+
+        </div>
+    </div>
+
+    <div class="col-md-4" id="seccol">
+        <h4><strong>Bills Authored by {{official.first_name}} {{official.last_name}}</strong></h4>
+   <!--  {% for bill in bills %}       
+        <p>{{bill.official.name}}</p> -->
+<!-- 
+    {% endfor %}   -->
+    </div>  
+
+    <div class="col-md-4" id="thirdcol">
+            <h4><strong>Contact Information</strong></h4>
+            <div header>Social Media</div>
+                <p><a href= "{{official.facebook}}"><img src="/img/fb.png" width="50" height="50"></a>
+                    <a href= "{{official.twitter}}"><img src="/img/twitter.png" width="50" height="50"></a>
+                </p>
+            <div header>General Contact</div>
+                <p>
+                    <em><strong>Email</strong></em></br>
+                    {{official.email}}</br></br>
+                    <em><strong>Phone</strong></em></br>
+                    {{official.phone}}</br></br>
+                    <em><strong>Address</strong></em></br>
+                    {{official.address}}</br></br>
+                </p>
+
+    </div>
+
+</div>     
+<footer class="form" id="backbutton">
+<a class="btn btn-info btn-default" href = "/">Return to Home Page</a>
+</footer>  
+
+
+<body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/respond.js"></script>
+</head>
+    <style>
+        body {
+            background-color: #428bca;
+            }
+
+            h1 {
+                font-family: arial;
+                font-size: 64px;
+                color: darkred;
+                margin-bottom: 40px;
+                
+            }
+            #box {
+                width: 1500px;
+               /* margin-right: 80px;
+                margin-left: 80px;*/
+                padding: 10px 10px 10px 10px;
+                float:center;
+            }
+            h4 {
+                float: center;
+            }
+            #representatives_button{
+                background-size: 25px;
+            }
+    </style>
+<body>
+<div class="container">
+    <!-- row 1 -->
+    <header class="row">
+    	<div class="col-lg-6 col-sm-5">
+        	<h1 class="text-left", ""><strong>ReppinIt</strong></h1>
+        </div>
+    	<!-- <div class="col-md-6 col-sm-7">
+        	<img src="img/animals.jpg" alt="" class="hidden-xs">
+        </div> -->
+    </header>
+    
+    <!-- row 2 -->
+    <div class="jumbotron">
+    	<img src="img/animals.jpg" alt="" class="pull-right">
+        <h2><strong> Bridging the gap between public connectedness and political action</strong></h2>
+        <p><em>Search by zip code and get all your corresponding council members, assembly persons, and federal representatives for contact. Also search by bill number or representatives name</em></p>
+    </div>
+    
+    <!-- row 3 -->
+    <div class="row" id="box">
+    	<div class="col-md-3 col-xs-6">
+            <h4><strong>Search by 5-digit zipcode</strong></h4>
+            <p><img src="img/zipcodenv.jpg" alt="Responsive image" class="img-responsive img-circle"></p>
+            <div id="zip_button">
+            <form action="/replst" form method="post">
+            <input class= "form-control input-md"type="text" name="zipcode" placeholder="Zip Code"><br>
+            <input class="btn btn-success" type="submit" value="Submit">
+            </form>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+            <h4><strong>Search by a specific representative</strong></h4>
+            <p><img src="img/pp.png" alt="Responsive image" class="img-responsive img-circle"></p>
+            <div id="representatives_button">
+            <form action="/rep_by_id" method="post">
+            <input class="form-control input-md" type="text" name="representative" placeholder="Last Name"> <br>         
+            <input class="btn btn-success" type="submit" value="Submit">
+            
+            </form>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+            <h4><strong>Search by a specific bill</strong></h4>
+            <p><img src="img/bill.png" alt="Responsive image" class="img-responsive img-circle"></p>
+            <div id="bills_button">
+            <form action="/replst" form method="post">
+            <input class="form-control input-md" type="text" name="bills" placeholder="Bill Name"><br>
+            <input class="btn btn-success" type="submit" value="Submit">
+            
+            </form>
+            </div>
+
+            
+        </div>
+    </div>
+    
+
+</div> <!-- end container -->
+<!-- javascript -->
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
